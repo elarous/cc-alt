@@ -2,9 +2,11 @@
   (:require [reagent.core :as  r]
             [re-frame.core :as rf]
             [kee-frame.core :as k]
+            [cc-cljs.events] 
+            [cc-cljs.subs]
             [cc-cljs.db :refer [default-db]]
             [cc-cljs.routes :refer [routes]]
-            ["semantic-ui-react" :as ui]))
+            [cc-cljs.views :refer [register-form]]))
 
 (k/reg-event-fx
  :navigate-to
@@ -21,7 +23,7 @@
   [:h1 "login page"])
 
 (defn register []
-  [:h1 "register page"])
+  [register-form])
 
 (defn not-found []
   [:h1 "Page Not Found :("])
@@ -44,3 +46,5 @@
 
 (defn stop! []
   (println "Stopping ..."))
+
+#_(start!)

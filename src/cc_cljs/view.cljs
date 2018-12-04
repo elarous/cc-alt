@@ -1,2 +1,0 @@
-(ns cc-cljs.view)
-
